@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>AI Hỗ Trợ Việc Học — Trợ Lí Học Tập (HTML only)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Chú ý: KHÔNG dùng CSS, KHÔNG dùng JS theo yêu cầu -->
+</head>
+<body>
+
+<!-- HEADER -->
+<center>
+  <h1>🤖 AI Hỗ Trợ Việc Học</h1>
+  <h3>Trang tài nguyên học tập tĩnh — Gọn, dễ dùng, chỉ HTML</h3>
+  <p>
+    <small>
+      Xin chào! Đây là demo một trang "AI hỗ trợ việc học" viết <strong>chỉ bằng HTML</strong>.
+      Bạn có thể duyệt menu, mở flashcards, xem mẫu bài tập, kế hoạch học, và mẫu prompt AI để copy.
+    </small>
+  </p>
+  <hr noshade width="100%" />
+</center>
+
+<!-- NAVIGATION -->
+<center>
+  <table cellpadding="5" cellspacing="5" border="0">
+    <tr>
+      <td><a href="#home">🏠 Trang chính</a></td>
+      <td><a href="#planner">🗓 Kế hoạch học</a></td>
+      <td><a href="#flashcards">💡 Flashcards</a></td>
+      <td><a href="#ai-prompts">🧠 Mẫu AI</a></td>
+      <td><a href="#resources">📚 Tài nguyên</a></td>
+      <td><a href="#contact">✉️ Liên hệ</a></td>
+    </tr>
+  </table>
+</center>
+
+<hr noshade width="100%" />
+
+<!-- HERO / INTRO -->
+<center>
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+        Ngọc bất trác bất thành khí - Nhân bất học bất tri lý - Học tập là con đường dẫn đến thành công!
+    </marquee>
+</center>
+
+<!-- MAIN LAYOUT: sử dụng table (HTML-only "layout") -->
+<table cellpadding="12" cellspacing="8" border="0" width="100%">
+  <tr valign="top">
+    <!-- Left column: main content -->
+    <td width="65%">
+
+      <!-- HOME -->
+      <a id="home"></a>
+      <h2>🏁 Bắt đầu</h2>
+      <p>
+        Trang này gồm:
+      </p>
+      <ul>
+        <li>Trình bày kế hoạch học (mẫu).</li>
+        <li>Flashcards tương tác (dùng &lt;details&gt; để mở/đóng).</li>
+        <li>Mẫu prompt AI để bạn copy vào ChatGPT/đưa vào backend.</li>
+        <li>Các mẹo học, tài liệu tham khảo, và biểu đồ tiến độ (HTML elements).</li>
+      </ul>
+
+      <hr />
+
+      <!-- PLANNER -->
+      <a id="planner"></a>
+      <h2>🗓 Kế hoạch học nhanh</h2>
+      <p><i>Ghi chú:</i> form dưới là tương tác client-side (không lưu). Bạn có thể in ra hoặc lưu trang.</p>
+
+      <form action="#planner" method="get">
+        <fieldset>
+          <legend>Thiết lập kế hoạch (mẫu)</legend>
+          <label>Chủ đề học: <input type="text" name="topic" value="Toán - Đại số" /></label><br /><br />
+          <label>Thời lượng mỗi buổi (phút): <input type="number" name="minutes" value="45" /></label><br /><br />
+          <label>Buổi / tuần: 
+            <select name="sessions">
+              <option>1</option>
+              <option selected>3</option>
+              <option>5</option>
+              <option>7</option>
+            </select>
+          </label><br /><br />
+          <label>Độ ưu tiên:
+            <meter min="0" max="10" value="7">7/10</meter>
+          </label><br /><br />
+          <input type="submit" value="Tạo mẫu kế hoạch (không lưu)" />
+        </fieldset>
+      </form>
+
+      <p><b>Mẫu kế hoạch đề xuất (cố định):</b></p>
+      <ol>
+        <li><b>Thứ 2:</b> Ôn lý thuyết 30 phút, làm bài tập 15 phút.</li>
+        <li><b>Thứ 4:</b> Làm đề mẫu / flashcards 45 phút.</li>
+        <li><b>Thứ 6:</b> Kiểm tra nhanh (quiz tự tạo) 30 phút + sửa lỗi 15 phút.</li>
+      </ol>
+
+      <p>Tiến độ tuần này:</p>
+      <progress value="60" max="100">60%</progress> <small>60% hoàn thành</small>
+
+      <hr />
+
+      <!-- FLASHCARDS -->
+      <a id="flashcards"></a>
+      <h2>💡 Flashcards (mở để xem đáp án)</h2>
+
+      <details>
+        <summary><strong>Q1:</strong> Định nghĩa đạo hàm của hàm số là gì?</summary>
+        <p><i>Đáp án:</i> Đạo hàm f'(x) là giới hạn của tỉ số tăng khi Δx→0: f'(x)=lim_{Δx→0}(f(x+Δx)-f(x))/Δx.</p>
+      </details>
+
+      <details>
+        <summary><strong>Q2:</strong> Past simple vs Present perfect — khi nào dùng?</summary>
+        <p><i>Đáp án:</i> Past simple dùng cho hành động đã xảy ra và kết thúc ở quá khứ; Present perfect dùng cho hành động có liên hệ tới hiện tại hoặc chưa chỉ rõ thời điểm.</p>
+      </details>
+
+      <details>
+        <summary><strong>Q3:</strong> Công thức tính diện tích hình tròn?</summary>
+        <p><i>Đáp án:</i> S = πr².</p>
+      </details>
+
+      <hr />
+
+      <!-- AI PROMPTS -->
+      <a id="ai-prompts"></a>
+      <h2>🧠 Mẫu prompt AI (copy & paste vào ChatGPT)</h2>
+      <p>
+        Dưới đây là một số <b>prompt</b> mẫu giúp bạn dùng AI để học hiệu quả.
+        Bạn có thể paste chúng vào ChatGPT hoặc gửi lên backend AI của bạn.
+      </p>
+
+      <h3>1) Tạo kế hoạch học 4 tuần</h3>
+      <pre>
+Tạo giúp tôi một kế hoạch học 4 tuần cho chủ đề: <b>Hóa hữu cơ - nguyên lý cơ bản</b>.
+Mỗi tuần 4 buổi, mỗi buổi 45 phút. Tôi là người mới bắt đầu. Ghi rõ mục tiêu mỗi buổi, bài tập thực hành và đề kiểm tra cuối tuần.
+      </pre>
+
+      <h3>2) Giải thích bằng ngôn ngữ đơn giản</h3>
+      <pre>
+Giải thích khái niệm "đạo hàm" như tôi là học sinh lớp 10, dùng ví dụ trực quan và ít ký hiệu toán.
+      </pre>
+
+      <h3>3) Soạn câu hỏi trắc nghiệm</h3>
+      <pre>
+Soạn 10 câu trắc nghiệm (4 lựa chọn, 1 đáp án đúng) về "thế giới nguyên tử" cho học sinh lớp 8, kèm lời giải ngắn cho từng câu.
+      </pre>
+
+      <p><small>Gợi ý dùng:</small> Thêm "hãy chỉ ra lỗi thường gặp của người học" vào prompt để AI đưa tip sửa lỗi.</p>
+
+      <hr />
+
+      <!-- RESOURCES -->
+      <a id="resources"></a>
+      <h2>📚 Tài nguyên học tập & mẫu đề</h2>
+
+      <table cellpadding="6" cellspacing="0" border="1" width="100%">
+        <tr>
+          <th>Loại</th><th>Mô tả</th><th>Link tham khảo</th>
+        </tr>
+        <tr>
+          <td>Bài giảng</td>
+          <td>Toán: Đại số, Giải tích cơ bản (mô tả ngắn)</td>
+          <td><a href="https://vi.wikipedia.org" target="_blank">Wikipedia (vi)</a></td>
+        </tr>
+        <tr>
+          <td>Video</td>
+          <td>Chuỗi video giải thích khái niệm bằng trực quan</td>
+          <td><a href="https://www.youtube.com" target="_blank">YouTube</a></td>
+        </tr>
+        <tr>
+          <td>Sách</td>
+          <td>List sách tham khảo cơ bản (PDF hoặc in)</td>
+          <td><a href="https://www.gutenberg.org" target="_blank">Project Gutenberg</a></td>
+        </tr>
+      </table>
+
+      <hr />
+      
+      <!-- TIPS -->
+      <h2>🔎 Mẹo học nhanh</h2>
+      <ol>
+        <li>Học theo kỹ thuật Pomodoro: 25 phút học + 5 phút nghỉ (lặp 4 lần, nghỉ dài).</li>
+        <li>Làm flashcards và ôn lặp lại (spaced repetition).</li>
+        <li>Ghi chép bằng lời của bạn — tự giải thích (Feynman technique).</li>
+        <li>Sử dụng AI để tạo câu hỏi và kiểm tra kiến thức.</li>
+      </ol>
+
+    </td>
+
+    <!-- Right column: sidebar -->
+    <td width="35%">
+
+      <h3>📊 Quick Tools</h3>
+
+      <table cellpadding="6" cellspacing="0" border="0" width="100%">
+        <tr>
+          <td>
+            <b>Trạng thái hôm nay</b><br />
+            <small>Buổi đã hoàn thành:</small><br />
+            <progress value="3" max="3">2/3</progress><br />
+            <small>Đã học: 2/3 buổi</small>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Level test (mẫu)</b><br />
+            <ol>
+              <li>Đọc 1 đoạn tiếng Anh 100 từ, tóm tắt 2 câu.</li>
+              <li>Giải 5 bài toán cơ bản trong 30 phút.</li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Ghi chú nhanh</b><br />
+            <form action="#contact" method="get">
+              <textarea name="note" rows="6" cols="20" placeholder="Viết ghi chú..."></textarea><br />
+              <input type="submit" value="Lưu tạm (không lưu thật)" />
+            </form>
+          </td>
+        </tr>
+      </table>
+
+      <hr />
+
+      <h3>📝 Lịch kiểm tra mẫu</h3>
+      <ul>
+        <li>01/12/2025 — Kiểm tra Toán (45 phút)</li>
+        <li>05/12/2025 — Kiểm tra Tiếng Anh (nghe & đọc)</li>
+      </ul>
+
+      <hr />
+
+      <h3>🔗 Nhanh</h3>
+      <ul>
+        <li><a href="#ai-prompts">Mẫu prompt AI</a></li>
+        <li><a href="#flashcards">Flashcards</a></li>
+        <li><a href="#planner">Kế hoạch</a></li>
+      </ul>
+
+    </td>
+  </tr>
+</table>
+
+<hr />
+
+<!-- FOOTER / CONTACT -->
+<center>
+  <a id="contact"></a>
+  <h3>✉️ Liên hệ & Ghi chú</h3>
+  <p>Nếu bạn muốn tích hợp AI thật vào trang này (ChatGPT / API), bạn có thể thêm backend hoặc JavaScript. Tôi có thể giúp khi bạn cho phép dùng JS/Server.</p>
+  <p>
+    Email mẫu: <a href="mailto:youremail@example.com">youremail@example.com</a>
+  </p>
+
+  <pre>
+┌────────────────────────────────────────────┐
+| AI Hỗ Trợ Việc Học — Trang chỉ dùng HTML   |
+| Phiên bản: 1.0                             |
+| Lưu ý: tĩnh — không có AI thật hoặc lưu trữ|
+└────────────────────────────────────────────┘
+  </pre>
+
+  <p><small>© 2025 — Bài nhóm</small></p>
+</center>
+
+</body>
+</html>
